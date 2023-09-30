@@ -1,0 +1,22 @@
+/*!
+ * Customed by Mao 2017.07.21 - mao-about-me
+ * 
+ * Inherit http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css
+ * 
+ */
+.mao-about-me {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    background-color: #222;
+    border-color: #080808;
+    color: #337ae7
+}
+
+.mao-about-me:focus, .mao-about-me:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent
+}

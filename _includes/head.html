@@ -1,0 +1,61 @@
+<head>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	
+	<title>{% if page.title %}{{ page.title }}{{ site.titleSuffix }}{% else %}{{ site.title }}{% endif %}</title>
+	
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+	
+
+	<link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{"/static/css/mao-bootstrap.min.css" | prepend: site.baseurl }}">
+
+	<!-- for PC show, Override bootstrap-->
+	<style>
+		.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+ 		@media (min-width:768px){.container{width:750px}}
+ 		@media (min-width:992px){.container{width:970px}}
+ 		@media (min-width:1200px){.container{width:93%}}
+
+		@media (min-width:768px){.col-sm-3,.col-sm-9{float:left}.col-sm-9{width:77%}.col-sm-3{width:23%}}
+	</style>
+
+
+	<link rel="stylesheet" type="text/css" href="{{ "/static/css/index.css" | prepend: site.baseurl }}">
+	
+
+
+	<!-- <script type="text/javascript" src="{{ "/static/js/jquery-1.11.1.min.js" | prepend:site.baseurl }}"></script>
+	<script type="text/javascript" src="{{ "/static/js/bootstrap.min.js" | prepend:site.baseurl }}"></script> -->
+
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+
+	<script type="text/javascript" src="{{"/static/js/index.js" | prepend:site.baseurl}}"></script>
+
+
+
+	<!-- Markdown 代码块 -->
+	<link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/highlight.js/8.4/styles/monokai_sublime.min.css">
+	<script type="text/javascript" src="https://apps.bdimg.com/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- 个人信息 -->
+	<script>
+	  {% if page.excerpt %}
+	  console.log("");
+	  console.log("{{page.excerpt}}");
+	  {% endif %}
+	  console.log("");
+	  console.log("Jianwei Mao, Beijing University of Posts and Telecommunications(BUPT)");
+	  console.log("+86-1312-1919-353, {{ site.email }}");
+	  console.log("");
+	</script>
+</head>

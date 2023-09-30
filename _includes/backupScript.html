@@ -1,0 +1,29 @@
+<!-- 个人信息 -->
+<!-- 
+	<script>
+		//  <!-shield changyan adverts->
+
+		// Mao: cancel the lower right corner floating advert
+		var oldAppendChild = Element.prototype.appendChild;
+		Element.prototype.appendChild = function() {
+			if ("MZAD_POP_PLACEHOLDER" != arguments[0].id) {
+				return oldAppendChild.apply(this, arguments);
+			}
+		}
+
+		// Mao: Override setInterval() globally
+		// Mao: cancel the tailing advert, which is at the bottom of comments.
+		var oldSetInterval = setInterval; 
+		window.setInterval = function(callback, interval) { 
+			if (interval == 3e3) {
+				var e = document.getElementById("feedAv"), t = "display:none;";
+				if (null != e)
+					e.setAttribute("style", t);
+			} else {
+				return oldSetInterval(callback, interval);
+			}
+		}
+
+		console.log("Init Advert Shield :)");
+	</script>
+-->

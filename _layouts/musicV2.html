@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<div id="post" class="row">
+  <div class="col-sm-9" class="col">
+     <!-- id="myArticle" -->
+    <div class="post-area post">
+      <header>
+        <h1>{% if page.vocalName %}{{ page.vocalName }}{% else %}{{ page.keyboardName }}{% endif %}</h1>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+      <hr>
+      <article>
+        <table style="border-top: 0px solid #777; border-bottom: 0px solid #777; width: 100%;">
+          <td style="padding: 0px; width: 38.2%; text-align: center;">
+            <img src="{{ page.musicCover }}" title="{{ page.vocalName }}" style="width: auto;">
+          </td>
+          <td style="vertical-align: top; width:  61.8%; padding-right: 0px;">
+            <table style="border-top: 0px solid #777; border-bottom: 0px solid #777;">
+              <tr style="vertical-align: bottom;">
+                <blockquote>
+                  <p><strong>{{ page.accompaniment }}</strong></p>
+
+                  <p><strong>{{ page.recordTime }}</strong></p>
+
+                  <p><strong>{{ page.recordPlace }}</strong></p>
+                  
+                  <p><strong>歌曲链接：<a href="{{page.externalLink}}">{{page.externalPlatform}} -《{{page.title}} - 大毛》</a></strong></p>
+                </blockquote>
+              </tr>
+            </table>
+            <br/>
+            <center>{{ page.specialWords }}</center>
+          </td> 
+        </table>
+      </article>
+    </div>
+
+
+    <div class="post-area post">
+      <br/><b><center>电子国风伴轻舞，唯我繁星少女组！关注微博 <a href="https://weibo.com/sing2014">@SING女团</a> <a href="https://weibo.com/maojianwei2012">@天高任毛飞_大毛</a></center></b><br/>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-3">
+
+    <div class="shadow-corner-curl hidden-xs">
+
+      <div class="categories-list-header" style=" text-align:center;">
+        <a href="{{ site.myGithubLink }}/"><img alt="" class="avatar" height="230" src="{{ site.myPhoto }}" width="230" /></a>
+
+        <h2 class="MyName">
+          {{ site.myName }}
+        </h2>
+
+          <a class="University" href="http://www.bupt.edu.cn/">{{ site.chinaName }} - {{ site.BUPTname }}</a>
+          <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      
+
+      <div class="categories-list-header">
+        最近更新时间：<br />{{ site.time }}
+      </div>
+    </div>
+  </div>
+
+</div>

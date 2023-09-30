@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<div id="post" class="row">
+  <div class="col-sm-9" class="col">
+     <!-- id="myArticle" -->
+    <div class="post-area post">
+      <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+      <hr>
+      <article>
+        {{content}}
+      </article>
+      <hr>
+    </div>
+
+
+    <div class="post-area post">
+      <br/><b><center>文中的不足之处还请朋友们不吝赐教，可发邮件至 <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a> 与笔者联系，欢迎交流 ：）</center></b><br/>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs">
+
+       <div class="categories-list-header" style=" text-align:center;">
+          <a href="{{ site.myGithubLink }}/"><img alt="" class="avatar" height="230" src="{{ site.myPhoto }}" width="230" /></a>
+
+          <h2 class="MyName">
+            {{ site.myName }}
+          </h2>
+
+            <a class="University" href="http://www.bupt.edu.cn/">{{ site.chinaName }} - {{ site.BUPTname }}</li>
+            <a class="email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </div>
+
+
+      <div class="categories-list-header">
+        Categories
+      </div>
+      
+      <a href="{{ site.baseurl }}/" class="categories-list-item" cate="All">
+        All<span class="my-badge"> {{site.posts | size}}</span>
+      </a>
+      {% for category in site.categories %}
+        <a href="{{ site.baseurl }}/" class="categories-list-item" cate="{{ category | first }}">
+          {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+
+</div>

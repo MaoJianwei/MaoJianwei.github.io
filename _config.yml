@@ -1,0 +1,53 @@
+# Site settings
+#title: BigMao Radio Station
+title: Jianwei Mao | 毛健炜 博客
+titleSuffix: " | 毛健炜 博客"
+
+maoHeader: About me
+#maoHeader: SDN / NFV - Service Provider / Data Center Network - Software / Platform Architecture
+
+email: MaoJianwei2012@126.com
+
+myEngName: Jianwei Mao
+myName: 毛健炜
+BUPTname: 北京邮电大学
+chinaName: China
+Resume: 毛健炜，2016/09-至今，研究生，北邮未来网络实验室(FNLab)；ONOS中国区大使
+Major: SDN/NFV，运营商、数据中心网络，萌芽中的架构师
+myPhoto: /resources/picture/index/Myphoto.jpg
+# myPhoto: http://www.maojianwei.com/resources/picture/index/Myphoto.jpg
+myMIIT: 京ICP备17019309号
+myGithubLink: https://github.com/MaoJianwei
+#https://avatars3.githubusercontent.com/u/12800168?v=3&amp;s=460
+
+#markdown_ext: md,markdown,mkd,mkdn
+#markdown: Kramdown
+# markdown: Redcarpet
+
+# description:
+# > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+
+
+# baseurl: "" # the subpath of your site, e.g. /blog/
+#url: http://maojianwei.github.io # the base hostname & protocol for your site, backup maojianwei.github.io
+url: https://www.maojianwei.com # the base hostname & protocol for your site, backup maojianwei.github.io
+# twitter_username: jekyllrb
+github_username: MaoJianwei
+permalink: /:year/:month/:day/:title/
+excerpt_separator: "\n\n\n"
+
+timezone: Asia/Shanghai
+highlighter: rouge
+# highlighter: false
+plugins:
+  - jekyll-sitemap
+
+
+
+collections:
+  music:
+    output: true
+    # default is -> permalink: /:collection/:path/

@@ -1,0 +1,53 @@
+
+> **SDNLAB 文章发表：[https://www.sdnlab.com/20348.html](https://www.sdnlab.com/20348.html)**
+> 
+> 
+
+
+
+
+<br />
+
+![MaoGNTC_1280](/resources/picture/2017/12/onosYangP4/MaoGNTC_1280.JPG)
+
+<br />
+
+
+
+　　
+
+
+　　演讲PPT下载： [Jianwei Mao - GNTC 2017 - ONOS with YANG and P4 Runtime](/resources/Document/Jianwei_Mao___GNTC_2017___ONOS_with_YANG_and_P4_Runtime.pdf) <br /><br />
+
+
+> * 首要的是，高可用性，高可扩展性和高性能。这三点对运营商网络来说是尤为重要的。
+>
+> * 第二，要对网络资源进行高度抽象并简练地表示出来；
+>
+> * 第三，要做到协议无关以及对特定设备的驱动功能的无关；
+>
+> * 最后，是整个控制器系统的模块化，这一点保证了整个控制器软件架构的稳定性以及在支持新业务新需求方面的灵活性。
+>
+
+
+
+> 1. 是Pipeline’s Interpreter，转发表流水线的解释器，它主要做的是类型转换的工作，这个很重要，我们稍后会看到。
+>
+> 2. 是一个可选的FlowObjective’s Pipeliner，这个其实在OpenFlow中对应的也有。FlowRule是具体表示了一条转发表，而FlowObjective是我们想要达成的转发目标，FlowObjective是FlowRule的更高层的抽象。一个转发目标可能对应到一个特定设备上的多条流表。这个Pipeliner就负责进行FlowObjective到FlowRule的转换。
+>
+> 3. 是一个可选的PortStatisticsDiscovery。比方说，我们写的P4程序里对端口的数据收发做了统计，我们在控制器上需要读取这些统计值，那么我们就需要给它加一个PortStatisticsDiscovery，端口统计发现这样的驱动功能。这个是可选的。如果说我们就想做一个ping通的实验，不需要这个统计功能，那么OK，就省去了这块的功夫。
+>
+
+
+
+---
+layout: music
+
+vocalName: test-vocal-vocal
+
+
+date: 2018-07-22 04:33:00 +0800
+comments: true
+categories: SDN ONOS P4
+excerpt: ONOS架构中的YANG、P4 Runtime
+---
